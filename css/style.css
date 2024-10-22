@@ -267,3 +267,11 @@ canvas {
     height: 50%;
     width: 50%;
 }
+
+.express-section>ul>li {
+    font-size: 15px;
+}
+
+.nest-section>ul>li {
+    font-size: 15px;
+}
