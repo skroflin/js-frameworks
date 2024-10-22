@@ -1,0 +1,269 @@
+.section-1 {
+    font-size: larger;
+}
+
+footer>h4 {
+    float: left;
+}
+
+.div-1 {
+    margin-left: 70%;
+}
+
+.img-1 {
+    width: 50%;
+    height: 50%;
+}
+
+.div-1>p {
+    font-size: 5px;
+    margin-left: 30px;
+}
+
+.section-2>footer>ol>li {
+    font-size: medium;
+    padding-top: 20px;
+}
+
+.section-3 {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "content content content";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-areas:
+        "footer footer aside"
+        "footer footer aside";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.img-2 {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.image-caption {
+    text-align: center;
+    font-size: small;
+}
+
+.image-caption p {
+    margin: 0.5rem 0;
+    font-size: 0.9em;
+}
+
+.section-3>.content>.footer>ul>li {
+    font-size: medium;
+    padding-top: 20px;
+}
+
+li>strong {
+    font-weight: bolder;
+}
+
+.section-4 {
+    display: grid;
+    grid-template-areas:
+        "header02 header02 header02"
+        "content02 content02 content02";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    height: 100vh;
+}
+
+.header02 {
+    grid-area: header02;
+}
+
+.content02 {
+    grid-area: content02;
+    display: grid;
+    grid-template-areas:
+        "footer02 footer02 footer02"
+        "footer02 footer02 footer02";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.footer02 {
+    grid-area: footer02;
+}
+
+.section-4>.content02>.footer02>ul>li {
+    font-size: medium;
+    padding-top: 20px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800pxs;
+    margin: 0 auto;
+}
+
+.bottom02 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-container {
+    width: 48%;
+    max-width: 400px;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.section-5 {
+    display: grid;
+    grid-template-areas:
+        "header02 header02 header02"
+        "content02 content02 content02";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    height: 100vh;
+}
+
+.section-5>.content02>.footer02>ul>li {
+    font-size: medium;
+    padding-top: 10px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.framework-logo {
+    width: 70px;
+    height: auto;
+}
+
+.footer02>h3 {
+    font-size: large;
+}
+
+.footer02>ul>li {
+    float: left;
+    font-size: 10px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.react-icon {
+    display: inline-block;
+    animation: spin 10s linear infinite;
+}
+
+.radiation-icon {
+    animation: spin 10s linear infinite;
+}
+
+.react-icon,
+.vue-icon,
+.angular-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frameworks-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.frameworks-container>.footer02 {
+    flex: 1;
+    max-width: 50%;
+}
+
+.frameworks-container>.footer02 li {
+    padding: 7px;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
+.train-icon {
+    display: inline-block;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+.h01 {
+    font-size: 2em;
+}
+
+.p01 {
+    font-size: 5px;
+}
+
+.img-3 {
+    height: 50%;
+    width: 50%;
+}

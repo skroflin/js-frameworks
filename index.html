@@ -4,11 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Prezentacija</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/white-contrast.css">
+		<link rel="stylesheet" href="css/style.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +17,374 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section class="section-1">
+					<header>
+						<h1>
+							<i class="fa-brands fa-js"></i>
+							JavaScript radne okoline
+						</h1>
+					</header>
+					<hr>
+					<footer>
+						<h4>
+							Sven Kroflin
+						</h4>
+					</footer>
+					<div class="div-1">
+						<img src="https://uploads1.yugioh.com/character/4/detail/detail/solomon-l.png?1375717041" alt="img-1" class="img-1">
+						<!-- Izvor: https://uploads1.yugioh.com/character/4/detail/detail/solomon-l.png?1375717041 (2024-10-20) -->
+						<p>Moj 13. razlog zašto</p>
+					</div>
+				</section>
+				<section class="section-2">
+					<header>
+						<h1>
+							Sadržaj
+							<i class="fa-solid fa-book-open"></i>
+						</h1>
+					</header>
+					<hr>
+					<footer>
+						<ol>
+							<li>Uvod</li>
+							<li>Radne okoline</li>
+							<li>Klijent strane radne okoline</li>
+							<li>Server strane radne okoline</li>
+							<li>Implementacija</li>
+							<li>Zaključak</li>
+						</ol>
+					</footer>
+				</section>
+				<section>
+					<section class="section-3">
+						<div class="header">
+							<h1>
+								Uvod
+								<i class="fa-solid fa-landmark"></i>
+							</h1>
+						</div>
+						<hr>
+						<div class="content">
+							<div class="footer">
+								<ul>
+									<li>
+										<strong>JavaScript</strong> je skriptni jezik koji omogućuje primjenu kompleksnih značajki na samoj mrežnoj stranici
+									</li>
+									<li>
+										Plasiran je na tržište 1996. godine
+									</li>
+									<li>
+										Uz <strong>HTML</strong> i <strong>CSS</strong>, smatra se temeljem oblikovanja mrežnih stranica
+									</li>
+									<li>
+										Primjena u dinamičnom modificiranju HTML-a i CSS-a putem <strong>DOM-a</strong>
+									</li>
+									<li>
+										JavaScript se primjenjuje u više od <strong>98,7%</strong> mrežnih stranica u sklopu <strong>klijentske strane</strong>
+									</li>
+									<li>
+										Klijent strana predstavlja sve što se događa na korisnikovoj strani uređaja
+									</li>
+									<li>
+										Potreba za kompleksnijim aplikacijama dolazi do razvoja jednostraničnih aplikacija ili <strong>SPA - Single-Page Application</strong>
+									</li>
+									<li>
+										Naglasak na "asinkronizirano" ažuriranje - bez osvježavanja cijele stranice
+									</li>
+									<li>
+										Zamjećuju se ograničenja <i class="fa-solid fa-ice-cream"></i>JavaScript-a, te kao posljedica dolazi do razvoja radnih okolina ili
+										<strong>"framework"</strong>-ova
+									</li>
+								</ul>
+							</div>
+							<div class="aside">
+								<div class="image-container">
+									<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/800px-DOM-model.svg.png" alt="img-2" class="img-2">
+								</div>
+								<div class="image-caption">
+									<p>
+										Kako <strong>DOM</strong> funkcionira.
+									</p>
+									<p>
+										<strong>Izvor: </strong>https://anujf0510.medium.com/understanding-the-document-object-model-dom-bd2fda9ffdab.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section class="section-4">
+						<div class="header02">
+							<h1>
+								Radne okoline
+								<i class="fa-solid fa-book"></i>
+							</h1>
+						</div>
+						<hr>
+						<div class="content02">
+							<div class="footer02">
+								<ul>
+									<li>
+										<strong>Radna okolina</strong> je skup komponenti programske podrške namijenjeni višestrukom korištenju
+									</li>
+									<li>
+										Sadržavaju module koda za višestruku uporabu, poznate kao <strong>biblioteke ili "libraries"</strong>
+									</li>
+									<li>
+										Svaka pojedinačna radna okolina može primijeniti zasebnu arhitekturu, kako bi se razvitak težio prema standardiziranim načelima
+									</li>
+									<li>
+										JavaScript radne okoline su razvijene kako bi se pružao unaprijed definiran kod i nadomjestila potreba razvoja vlastitih rješenja
+									</li>
+									<li>
+										Ekosustav i zajednica JavaScript-a omogućuje razvoj radnih okolina koje su primjenjive u različitim područjima (testiranje, razvoj klijent i server strane, razvoj moblinih aplikacija...)
+									</li>
+									<li>
+										Najpopularnije radne okoline u okviru razvoja klijent strane su: <i class="fa-brands fa-react"></i>, <i class="fa-brands fa-vuejs"></i>, <i class="fa-brands fa-angular"></i> i Svelte (fa nema logo:/)
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bottom">
+							<div class="chart-container">
+								<canvas id="myChart"></canvas>
+							</div>
+							<div class="chart-container">
+								<canvas id="myChart-2"></canvas>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section class="section-5">
+						<hr>
+						<div class="content02">
+							<div class="footer02">
+								<ul>
+									<li>
+										Zbog daljnjeg razvoja, JavaScript radne okoline se počinju primjenjivati u području razvoja <strong>server strane aplikacija</strong>
+									</li>
+									<li>
+										Server strana uključuje server, koji dostavlja dinamički sadržaj mrežnim stranicama kao <strong>odgovor</strong> na korisnikov <strong>zahtjev</strong>
+									</li>
+									<li>
+										Najpoznatiji alat je runtime environment <strong>Node.js <i class="fa-brands fa-node-js"></i></strong>, primjenjuje JavaScript za pisanje koda unutar server strane
+									</li>
+									<li>
+										Primjenom "asinkronizacije", Node.js gradi skalabilne mrežne aplikacije
+									</li>
+									<li>
+										Najpopularnije radne okoline (gledajući metrike GitHub zvjezdica) za Node.js i razvoj server strane su: <strong>Express i NestJS</strong> <i class="fa-solid fa-arrow-down"></i>
+									</li>
+									<li>
+										Arhitektura: <strong>MVC, FullStack MVC i REST API</strong>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bottom02">
+							<div class="chart-container">
+								<canvas id="myChart-3"></canvas>
+								<div class="logo-container">
+									<div class="logo-wrapper">
+										<img src="https://static-00.iconduck.com/assets.00/nestjs-icon-1024x1020-34exj0g6.png" alt="nest" class="framework-logo">
+									</div>
+									<div class="logo-wrapper">
+										<img src="https://img.icons8.com/color/512/express-js.png" alt="express" class="framework-logo">
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section class="section-5">
+					<div class="header02">
+						<h2>
+							Klijent strane radne okoline
+							<i class="fa-solid fa-user"></i>
+						</h2>
+					</div>
+					<hr>
+					<div class="frameworks-container">
+						<div class="footer02 react-section">
+							<h3>
+								React<i class="fa-brands fa-react react-icon"></i>
+							</h3>
+							<ul>
+								<li>
+									Razvili su ju Facebook (današnji <strong>Meta</strong> <i class="fa-brands fa-meta"></i>)
+								</li>
+								<li>
+									<strong>JavaScript biblioteka</strong>, razvija komponente UI-a namijenjene višestrukom korištenju
+								</li>
+								<li>
+									Omogućuje razvoj kompleksnijih aplikacija, koje primjenjuju <strong>asinkroniziran način rada</strong> (bez potrebe za osvježivanjem stranice)
+								</li>
+								<li>
+									"Renderira" na strani servera uz pomoć Node.js, te pruža podršku za razvoj mobilnih aplikacija pomoću <strong>React Native-a</strong>
+								</li>
+								<li>
+									Druge radne okoline direktno komuniciraju s DOM-om te manipulariju stablom DOM-a <i class="fa-solid fa-arrow-right"></i> rezultira usporavanje aplikacije
+								</li>
+								<li>
+									React nudi <strong>Virtualni DOM</strong> <i class="fa-solid fa-arrow-right"></i> virtualna reprezentacija UI-a pohranjena u navedenom DOM-u (putem biblioteke ofc)
+								</li>
+								<li>
+									Jednostavno shvaćanje pogotovo primjenom <strong>JSX-a</strong> = sintaksa identična XML-u
+								</li>
+								<li>
+									<strong>Component-based</strong> radna okolina <i class="fa-solid fa-arrow-right"></i> komponenta predstavlja jedinicu koja gradi UI
+								</li>
+								<li>
+									<strong>Hooks</strong> su isto ključna značajka React-a, jer pomoću njih se upravlja korisničkim stanjem ili <strong>user state</strong>
+								</li>
+								<li>
+									Daljnjim razvojem React-a, pojavljuje se i <strong>Next</strong> <i class="fa-solid fa-arrow-right"></i> izrada full-stack aplikacija
+								</li>
+							</ul>
+						</div>
+						<div class="footer02 vue-section angular-section">
+							<h3>
+								Vue <i class="fa-brands fa-vuejs vue-icon"></i>
+							</h3>
+							<ul>
+								<li>
+									Razvio ju Evan You, kao alternativa React-u
+								</li>
+								<li>
+									<strong>Progresivna</strong> radna okolina namijenjena izgradnji UI-a (dodatak HTML-u)
+								</li>
+								<li>
+									Središte se temelji na "view" sloju (MVC-a) <i class="fa-solid fa-arrow-right"></i> pogodno za integraciju s postojećim bibliotekama
+								</li>
+								<li>
+									Varijable su reaktivne <i class="fa-solid fa-radiation radiation-icon"></i>, što znači da su prilagodljive promjenama u deklarativnom obliku
+								</li>
+								<li>
+									Reaktivni sustav funkcionira na temelju <strong>dubokog konvertiranja</strong> običnih JS objekata u relativne zastupnike
+								</li>
+								<li>
+									Vue također nudi <strong>deklarativno renderiranje</strong> gdje se nastavlja standardni HTML sa uzorkom sintakse
+								</li>
+							</ul>
+							<h3>
+								Angular <i class="fa-brands fa-angular angular-icon"></i>
+							</h3>
+							<ul>
+								<li>
+									Razvili su ju Google <i class="fa-brands fa-google"></i>
+								</li>
+								<li>
+									Angular isto kao i sve ostale radne okoline, služi kao "view" unutar MVC-a
+								</li>
+								<li>
+									Angular primjenjuje <strong>direktive</strong> (prefiks 'ng-') <i class="fa-solid fa-equals"></i> povezivanje podataka na view putem kontrolera
+								</li>
+								<li>
+									Glavni temelj Angulara jest <strong>dvosmjerno vezivanje podataka</strong> <i class="fa-solid fa-arrow-right"></i> automatski način ažuriranje view-a kadgod se model promijeni
+								</li>
+								<li>
+									Dvosmjerno vezivanje je pogodno pri sinkroniziranom čuvanju podataka komponenti 
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="section-5">
+					<div class="header02">
+						<h3>
+							Server strane radne okoline
+							<i class="fa-solid fa-server"></i>
+						</h3>
+					</div>
+					<hr>
+					<div class="frameworks-container">
+						<div class="footer02 express-section">
+							<h3>
+								Express
+								<i class="fa-solid fa-train train-icon"></i>
+							</h3>
+							<ul>
+								<li>
+									Minimalna i fleksibilna radna okolina Node.js-a <i class="fa-solid fa-arrow-right"></i> razvoj mrežnih aplikacija
+								</li>
+								<li>
+									Primjenjuje različite <strong>HTTP protokole</strong> kako bi se kreirali brzi i jednostavni API
+								</li>
+								<li>
+									Važni features Express-a su <strong>ruter (router), međuprogram (middleware), zahtjev i odgovor (request and reponse)</strong>
+								</li>
+								<li>
+									Rutiranje podrazumijeva <strong>krajnje točke</strong> i kako one odgovoravaju nakon korisnikovog zahtjeva
+								</li>
+								<li>
+									<strong>app</strong> metoda definira rutiranje <i class="fa-solid fa-arrow-right"></i> HTTP metode (<strong>GET, POST, PUT i DELETE</strong>)
+								</li>
+								<li>
+									<strong>Međuprogram ili middleware</strong> je skup funkcija koje imaju pristup na tražene objekte, odgovore i iduću funkciju unutar aplikacijskog ciklusa
+								</li>
+								<li>
+									<strong>Odgovor ili response</strong> predstavlja HTTP odgovor koji Express šalje zauzvrat nakon dobivenog zahtjeva
+								</li>
+								<li>
+									<strong>Zahtjev ili request</strong> predstavlja HTTP zahtjev i sadrži značajke samog zahtjeva
+								</li>
+							</ul>
+						</div>
+						<div class="footer02 nest-section">
+							<h3>
+								Nest
+								<i class="fa-solid fa-gamepad"></i>
+							</h3>
+							<ul>
+								<li>
+									Namijenjena izgradnji skalabilnih Node.js aplikacija koje se izvode na strani servera
+								</li>
+								<li>
+									Inkorporira progresivni JavaScript, podržava TypeScript i primjenjuje principe <strong>OOP-a, FP-a i FRP-a</strong>
+								</li>
+								<li>
+									<strong>Dekoratori</strong> se smatraju glavnom značajkom Nest-a <i class="fa-solid fa-arrow-right"></i> služe kao označitelji koji definiraju drukčije komponente unutar aplikacije
+								</li>
+								<li>
+									<strong>@controller, @catch, @injectible i @module</strong> <i class="fa-solid fa-arrow-right"></i> prati <strong>IOC ili inverziju kontrole</strong> tako što vrši <strong>DI ili injektiranje ovisnosti</strong> <i class="fa-solid fa-arrow-down"></i>
+								</li>
+								<li>
+									Povezivanje drukčijih slojeva aplikacije i upravljanje ovisnostima putem cijele baze koda
+								</li>
+								<li>
+									<strong>Ciklus zahtjev-odgovor</strong> ima nekoliko koraka koji su važni za uspješan ciklus <i class="fa-solid fa-arrow-down"></i>
+								</li>
+								<li>
+									1. Slanje zahtjeva <i class="fa-solid fa-arrow-right"></i> 2. Implementacija sučelja međuprograma <fa-solid class="fa solid fa-arrow-right"></fa-solid> 3. Implementacija "čuvara" ili guard-a <i class="fa-solid fa-arrow-right"></i> 4. NestInterceptors ili hvatači za logiranje <i class="fa-solid fa-arrow-right"></i> 5. Protok do kanala <i class="fa-solid fa-arrow-right"></i> 6. Pozivanje rute kontrolera
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h1>
+						Implementacija
+						<i class="fa-solid fa-code"></i>
+					</h1>
+				</section>
+				<section>
+					<h1>
+						Zaključak
+						<i class="fa-solid fa-hourglass-end"></i>
+					</h1>
+				</section>
+				<section>
+					<h1 class="h01">
+						Hvala!
+					</h1>
+					<p class="p01">
+						Nemojte koristiti JS ili njegove radne okoline save yourself!
+					</p>
+					<img src="https://wibu.com.vn/wp-content/uploads/2024/04/Grandpa-Muto.png" alt="img-3" class="img-3">
+					<!-- Izvor: https://wibu.com.vn/wp-content/uploads/2024/04/Grandpa-Muto.png (2024-10-22) -->
+				</section>
 			</div>
 		</div>
 
@@ -25,6 +392,73 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="https://kit.fontawesome.com/888baf7aba.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+		<script>
+			const xValues = ["React", "Vue", "Angular", "Svelte"];
+			const yValues = [228000, 208000, 96000, 78700];
+			const zValues = [24000000, 5000000, 3000000, 1000000];
+			const barColors = ["lightblue", "lightgreen","red","orange"];
+
+			const xValues02 = ["Express", "Nest"];
+			const yValues02 = [65400, 67200];
+			const barColors02 = ["grey", "darkred"];
+			
+			new Chart("myChart", {
+			  type: "bar",
+			  data: {
+				labels: xValues,
+				datasets: [{
+				  backgroundColor: barColors,
+				  data: yValues
+				}]
+			  },
+			  options: {
+				legend: {display: false},
+				title: {
+				  display: true,
+				  text: "GitHub zvjezdice po repozitoriju"
+				}
+			  }
+			});
+
+			new Chart("myChart-2", {
+			  type: "bar",
+			  data: {
+				labels: xValues,
+				datasets: [{
+				  backgroundColor: barColors,
+				  data: zValues
+				}]
+			  },
+			  options: {
+				legend: {display: false},
+				title: {
+				  display: true,
+				  text: "Broj preuzimanja putem npm-a ili node-package-manager"
+				}
+			  }
+			});
+
+			new Chart("myChart-3", {
+			  type: "pie",
+			  data: {
+				labels: xValues02,
+				datasets: [{
+				  backgroundColor: barColors02,
+				  data: yValues02
+				}]
+			  },
+			  options: {
+				legend: {display: false},
+				title: {
+				  display: true,
+				  text: "GitHub zvjezdice po repozitoriju"
+				}
+			  }
+			});
+
+		</script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
